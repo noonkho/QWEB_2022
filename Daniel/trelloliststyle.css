@@ -1,0 +1,53 @@
+.background {
+    color: lightgrey;
+    display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
+.element {
+    color: rgb(80, 80, 80);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    border: lightgray;
+    padding: 5px;
+    background-color: white;
+    margin: 5px;
+}
+
+.title {
+    background-color: rgb(247, 247, 247);
+    border: none;
+    height: 50px;
+    width: 300px;
+    padding: none;
+    font-size: 24px;
+    color: gray;
+    font-weight: bolder;
+}
+
+.list {
+    background-color: whitesmoke;
+    font-family: Impact, sans-serif;
+    font-weight: normal;
+    border: lightgray;
+    padding: 5px;
+    margin: 2px;
+}
+
+.buttonMakeList {
+    margin: 10px;
+    line-height: 15px;
+    padding: 20px;
+    background: rgb(163, 162, 162);
+    border: 2px;
+    border-color: rgb(107, 107, 107);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.xbutton {
+    height: 60px;
+    width: 100px;
+    background-color: none;
+    color: gray;
+}
