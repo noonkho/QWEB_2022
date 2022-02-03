@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trello Lists</title>
+    <link rel="stylesheet" href="trelloliststyle.css" />
+  </head>
+  <body>
+
+    <!--Script 1 is for dragging/dropping nodes-->
+    <script src = draganddrop.js></script>
+
+    <!--Script 2 is for adding/removing lists-->
+    <script src = addnewlist.js></script>
+
+    <!--Primary webpage area-->
+    <div 
+        class="background"
+        ondragover="whileDragElement(event);"
+        ondrop="dropElement(event);" 
+    >
+        <!--Button for adding new lists-->
+        <button type="buttonMakeList" style="height: 60px; width: 100px; background-color: rgb(40, 200, 253)" draggable="false" onClick="doButton();">
+            Add New List
+        </button>
+
+        <!--Add new list-->
+        <div 
+            class="list"
+            id="list1"
+            ondragover="whileDragElement(event);"
+            ondrop="dropElement(event)";
+        >
+            <!--List ID-->
+            <b>1</b>
+
+            <!--Add text box for list title-->
+            <input class="title">
+
+            <!--Add button to open remove option-->
+            <button type="xbutton" onClick="xButton(list1);">
+                X
+            </button>
+
+            <!--Add one node to list-->
+            <div
+                id="listbox-1"
+                class="element"
+                draggable = "true"
+                ondragstart = "dragElement(event);"
+            >
+
+            <!--Add textbox to node-->
+          <textarea name="box1" id="box1" style="background-color: white;border: none;height: 30px; max-height: 250px; min-height: 50px; width: 250px; max-width: 500px; min-width: 250px;font-size: 12px; font-family: Arial, Helvetica, sans-serif;"></textarea>
+          </div>
+        </div>
+      
+        <!--Add new list-->
+        <div 
+            class="list"
+            id="list2"
+            ondragover="whileDragElement(event);"
+            ondrop="dropElement(event)";
+        >
+            <!--List ID-->
+            <b>2</b>
+
+            <!--Add text box for list title-->
+            <input class="title">
+
+            <!--Add button to open remove option-->
+            <button type="xbutton" onClick="xButton(list2);">
+                X
+            </button>
+
+            <!--Add one node to list-->
+            <div
+                id="listbox-2"
+                class="element"
+                draggable = "true"
+                ondragstart = "dragElement(event);"
+            >
+
+            <!--Add textbox to node-->
+            <textarea name="box2" id="box2" style="background-color: white;border: none;height: 30px; max-height: 250px; min-height: 50px; width: 250px; max-width: 500px; min-width: 250px;font-size: 12px; font-family: Arial, Helvetica, sans-serif;"></textarea>
+            </div>
+
+            <!--Add one node to list-->
+            <div
+                id="listbox-3"
+                class="element"
+                draggable = "true"
+                ondragstart = "dragElement(event);"
+            >
+
+            <!--Add textbox to node-->
+            <textarea name="box3" id="box3" style="background-color: white;border: none;height: 30px; max-height: 250px; min-height: 50px; width: 250px; max-width: 500px; min-width: 250px;font-size: 12px; font-family: Arial, Helvetica, sans-serif;"></textarea>
+            </div>
+        </div>
+  </body>
+</html>
