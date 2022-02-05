@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Silo</title>
+	<link rel="stylesheet" href="index.css" />
+</head>
+<style>
+	.addCardButton {
+		background-color: slategrey;
+		border: none;
+		color: white;
+		padding: 8px 10px;
+		text-align: center;
+		display: inline-block;
+	}
+
+	.addCardButton:hover {
+		background-color: #617080;
+	}
+
+	.addListButton {
+		background-color: cadetblue;
+		border: none;
+		color: white;
+		padding: 10px 14px;
+	}
+
+	.addListButton:hover {
+		background-color: #548d8f;
+	}
+
+	body {
+		background-image: url(https://images.unsplash.com/photo-1487621167305-5d248087c724?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3JleSUyMG5hdHVyZXxlbnwwfHwwfHw%3D&w=1000&q=80);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+
+	}
+</style>
+
+<body class="page">
+	<div class="content">
+		<h1 id="title">Simple Trello</h1>
+		<form action="" method="post">
+			<div class="column">
+				<div class="row">
+					<h2 id="list">list</h2>
+					<button type="button" class="addCardButton" onclick="addCard()" id="addCardButton">Add a
+						card</button>
+					<ul>
+						<li><input type="text" placeholder="enter a title for this card" list="list" /></li>
+						<button id="removeRow" onclick="removeCard()" type="button">Remove</button>
+						<li><input type="text" placeholder="enter a title for this card" list="list" /></li>
+						<button id="removeRow" onclick="removeCard()" type="button">Remove</button>
+					</ul>
+				</div>
+			</div>
+
+			<div class="column">
+				<div class="row">
+					<h2 id="list">list</h2>
+					<button type="button" class="addCardButton" onclick="addCard()" id="addCardButton">Add a
+						card</button>
+					<ul>
+						<li><input type="text" placeholder="enter a title for this card" list="list" /></li>
+						<button id="removeRow" onclick="removeCard()" type="button">Remove</button>
+						<li><input type="text" placeholder="enter a title for this card" list="list" /></li>
+						<button id="removeRow" onclick="removeCard()" type="button">Remove</button>
+					</ul>
+				</div>
+			</div>
+
+			<button type="button" class="addListButton" onclick="addList()" id="addListButton">Add a list</button>
+	</div>
+	</form>
+
+	</div>
+
+	<script>
+		function addCard() {
+
+		}
+		function addList() {
+
+		}
+
+		function removeCard() {
+
+		}
+	</script>
+
+
+
+
+</body>
+
+</html>
