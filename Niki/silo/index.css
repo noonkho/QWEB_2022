@@ -6,3 +6,34 @@
 	color:blanchedalmond;
 }
 
+.addCardButton {
+	background-color: slategrey;
+	border: none;
+	color: white;
+	padding: 8px 10px;
+	text-align: center;
+	display: inline-block;
+}
+
+.addCardButton:hover {
+	background-color: #617080;
+}
+
+.addListButton {
+	background-color: cadetblue;
+	border: none;
+	color: white;
+	padding: 10px 14px;
+}
+
+.addListButton:hover {
+	background-color: #548d8f;
+}
+
+body {
+	background-image: url(https://images.unsplash.com/photo-1487621167305-5d248087c724?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3JleSUyMG5hdHVyZXxlbnwwfHwwfHw%3D&w=1000&q=80);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+

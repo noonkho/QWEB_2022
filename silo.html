@@ -9,24 +9,138 @@
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="fontawesome/all.css"> <!--load all styles -->
     <script defer src="fontawesome/all.js"></script> <!--load all styles -->
+
+    <!-- Niki's links -->
+    <link rel="stylesheet" href="Niki/silo/index.css">
+    <!-- Daniel's links -->
+    <link rel="stylesheet" href="Daniel/silo/trelloliststyle.css">
+    <script src="Daniel/silo/addnewlist.js"></script>
+    <script src="Daniel/silo/draganddrop.js"></script>
+    <!-- Stefan's links -->
+    <script src="Stefan/silo/index.js"></script>
+    <!-- Jasmine's links and style -->
+    <link rel="stylesheet" href="Jasmine/silo/trelloTest.js">
+    <style>
+        .fill{
+            background-image: url('http://source.unsplash.com/random/150x150');
+            position: relative;
+            height: 150px;
+            width: 150px;
+            top: 5px;
+            left: 5px;
+            cursor: pointer;
+        }
+
+        .empty{
+            display: inline-block;
+            height: 160px;
+            width: 160px;
+            margin: 10px;
+            border: 3px rgb(116, 228, 131);
+            background-color: white;
+        }
+
+        .hold{
+            border: solid lightgrey 4px;
+        }
+        .hovered{
+            background: darkgrey;
+            border-style: dashed;
+        }
+
+        .invisible{
+            display: none;
+        }
+    </style>
 </head>
 <body>
+    <!-- NavBar Section -->
     <div class="topnav" id="myTopnav">
         <a href="index.html"><i class="fas fa-home"></i> Home</a>
         <a href="silo.html" class="active"><i class="far fa-list-alt"></i> Silo</a>
         <a href="wordle.html"><i class="far fa-file-word"></i> Wordle</a>
         <a href="tictactoe.html"><i class="fas fa-gamepad"></i> TicTacToe</a>
-        <a href="about.html"><i class="far fa-address-card"></i> About</a>
         <a href="links.html"><i class="fas fa-external-link-alt"></i> Links</a>
         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
             <i class="fas fa-bars"></i></i>
         </a>
     </div>
-    <h1>Silo</h1>
-    <p>QWEB 2022 Team 4 1st Project: Silo</p>
+    <!-- Nav Bar Section -->
+    
+    <div style="margin: 1rem 1rem;">
+        <h1 id="title">Simple Trello - Silo</h1>
+        <br>
+        <!--Button for adding new lists-->
+        <button type="button" class="addListButton" draggable="false" onClick="doButton();">
+            Add New List
+        </button>
+
+        <div class="background">
+            <div class="list" id="list1"
+            ondragover="whileDragElement(event);"
+            ondrop="dropElement(event)";>
+                <!--List ID-->
+                <b>1</b>
+                <!--Add text box for list title-->
+                <input class="title">
+                <!--Add button to open remove option-->
+                <button type="xbutton" onClick="xButton(list1);">X</button>
+
+                <div id="main"></div>
+                <button type="button" onclick="addCard()"> + Add a card</button>
+            </div>
 
 
+            <div class="list" id="list2" ondragover="whileDragElement(event);" ondrop="dropElement(event)";>
+                <!--List ID-->
+                <b>2</b>
+                <!--Add text box for list title-->
+                <input class="title">
+                <!--Add button to open remove option-->
+                <button type="xbutton" onClick="xButton(list2);">X</button>
 
+                <div id="main"></div>
+                <button type="button" onclick="addCard()"> + Add a card</button>
+
+                <div id="listbox-1" class="element" draggable = "true" ondragstart = "dragElement(event);">
+                    <!--Add textbox to node-->
+                    <textarea name="box1" id="box1" style="background-color: white;border: none;height: 30px; max-height: 250px; min-height: 50px; width: 250px; max-width: 500px; min-width: 250px;font-size: 12px; font-family: Arial, Helvetica, sans-serif;"></textarea>
+                </div>
+
+                <!--Add one node to list-->
+                <div id="listbox-2" class="element" draggable = "true" ondragstart = "dragElement(event);">
+                    <!--Add textbox to node-->
+                    <textarea name="box2" id="box2" style="background-color: white;border: none;height: 30px; max-height: 250px; min-height: 50px; width: 250px; max-width: 500px; min-width: 250px;font-size: 12px; font-family: Arial, Helvetica, sans-serif;"></textarea>
+                </div>
+
+                <!--Add one node to list-->
+                <div id="listbox-3" class="element" draggable = "true" ondragstart = "dragElement(event);">
+                    <!--Add textbox to node-->
+                    <textarea name="box3" id="box3" style="background-color: white;border: none;height: 30px; max-height: 250px; min-height: 50px; width: 250px; max-width: 500px; min-width: 250px;font-size: 12px; font-family: Arial, Helvetica, sans-serif;"></textarea>
+                </div>
+            </div>
+        </div>
+    
+        <div class="empty">
+            <div class="fill" draggable = "true">
+            </div>
+        </div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+    
+        <br>
+        <h3 style="color: aliceblue;">Team member Individual Work Links</h3>
+        <div style="display: inline-block;">
+            <a href="Niki/silo/index.html" style="color: aliceblue; margin-left: 1rem;">Niki</a>
+            <a href="Daniel/silo/trellolist.html" style="color: aliceblue; margin-left: 1rem;">Daniel</a>
+            <a href="Stefan/silo/index.html" style="color: aliceblue; margin-left: 1rem;">Stefan</a>
+            <a href="Jasmine/silo/trelloTest.html" style="color: aliceblue; margin-left: 1rem;">Jasmine</a>
+        </div>
+    
+    <!-- div for margin purpose -->
+    </div>
 
     <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

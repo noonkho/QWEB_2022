@@ -11,23 +11,72 @@
     <script defer src="fontawesome/all.js"></script> <!--load all styles -->
 </head>
 <body>
+    <!-- NavBar Section -->
     <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
-        <a href="silo.html"><i class="far fa-list-alt"></i> Silo</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="silo.html" class="active"><i class="far fa-list-alt"></i> Silo</a>
         <a href="wordle.html"><i class="far fa-file-word"></i> Wordle</a>
         <a href="tictactoe.html"><i class="fas fa-gamepad"></i> TicTacToe</a>
-        <a href="about.html"><i class="far fa-address-card"></i> About</a>
         <a href="links.html"><i class="fas fa-external-link-alt"></i> Links</a>
         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
             <i class="fas fa-bars"></i></i>
         </a>
     </div>
-    <h1>QWEB 2022 Team 4</h1>
-    <p>Home PAGE</p>
+    <!-- Nav Bar Section -->
+
+    <div style="margin-left: 0.5rem;">
+        <h1>QWEB 2022 Team 4</h1>
+        
+        <button type="button" class="collapsible">Project 1 - Silo</button>
+        <div class="content">
+            <h3>Simplification of Trello (To Do List)</h3>
+            <p>Project Length: 2 Weeks (Academic Week 3 to 4)</p>
+            <p style="margin-bottom: 5px;">Team members Works:</p>
+            <ul style="margin: 0; padding-left: 18px;">
+                <li>Niki - Structure</li>
+                <li>Daniel - List functionality</li>
+                <li>Stefan - List item functionality</li>
+                <li>Jasmine - Dragging effect</li>
+                <li>Noon - Put everyone code together</li>
+            </ul>
+            <p><span style="color:red;"><i class="fas fa-exclamation-triangle"></i></span>Reminder: Data not able to save</p>
+            <p style="margin-bottom: 5px;">Things that are not good enough:</p>
+            <ul style="margin: 0; padding-left: 18px;">
+                <li>Lack of communication, individual components can't combine nicely</li>
+                <li>Some of the code are very messy, not well indented</li>
+                <li>Not clear instructions given to members, cause misunderstanding of the tasks</li>
+            </ul>
+            <p style="margin-bottom: 5px;">Bugs (Things that are not expected):</p>
+            <ul style="margin: 0; padding-left: 18px;">
+                <li>Card: Add a card, only works on one list</li>
+                <li>Card: Missing a checkbox</li>
+                <li>List: Delete List, have to choose list number</li>
+                <li>List: Add New List, can't really add successfully</li>
+                <li>Drag: Dragging effect on photo, expected on list items</li>
+                <li>Drag: Can't drag when combined</li>
+                <li>Struct: heading colour maybe hard to read</li>
+            </ul>
+            <br>
+        </div>
+
+        <button type="button" class="collapsible">Project 2 - Wordle</button>
+        <div class="content">
+            <h3>Recent 2022 popular game - Wordle</h3>
+            <p>Project Length: 3 Weeks (Academic Week 5 to 8)</p>
+        </div>
+
+        <button type="button" class="collapsible">Project 3 - TicTacToe</button>
+        <div class="content">
+            <h3>Well known game - Tic Tac Toe</h3>
+            <p>Project Length: 3 Weeks (Academic Week 9 to 12)</p>
+        </div>
 
 
+        <h2>About Us</h2>
+        <p>Our Team members are super new to Web Development</p>
+        <p>But we are willing to learn and improve <i class="far fa-grin-squint"></i></p>
 
-
+    </div>
     <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
         function hamburger() {
@@ -37,6 +86,21 @@
             } else {
                 x.className = "topnav";
             }
+        }
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
         }
     </script>
 </body>
