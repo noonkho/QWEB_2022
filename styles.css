@@ -72,16 +72,27 @@ body {
     text-align: left;
     outline: none;
     font-size: 1.5rem;
-  }
+}
   
-  .active, .collapsible:hover {
+.active, .collapsible:hover {
     background-color: #555;
-  }
+}
   
-  .content {
+.content {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
-  }
+}
+
+/* Rainbow text */
+.rainbow-text {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 25px;
+	text-shadow: #A3A3A3 1px 1px 1px;
+}
+.rainbow-text .block-line > span {
+	display: inline-block;
+}
